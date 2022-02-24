@@ -1,1 +1,1 @@
-# Sinapsi
+# Sinapse
