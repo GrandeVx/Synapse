@@ -53,7 +53,7 @@ def distance():
 def loop():
     while True:
         dis = int(distance()) # Acquisione Distanza -> int 
-        print("Distanza: %d cm" % dis)
+        Server_Communication(dis) # Invio Distanza al Server
         time.sleep(60) # il Sensore acquisisce la distanza ogni 60 secondi
 
 
