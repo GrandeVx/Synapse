@@ -5,6 +5,9 @@ import paho.mqtt.client as mqtt
 def on_message(client, userdata, message):
     """ Funzione dedita alle operazione di archiviazione dei dati all'arrivo di un messaggio """
     data = json.dump(message)
+
+    #TODO I dati devono essere salvati sul database (SQL,Firebase)
+    #TODO In Caso di Un Eccessivo inalzamento del livello, il sistema deve mandare una notifica via email
     print(data)
     
 
