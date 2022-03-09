@@ -1,13 +1,29 @@
-from this import d
+
+import paho.mqtt.publish as publish
 import RPi.GPIO as GPIO
 import time
 
 TRIG = 11
 ECHO = 12
+SERVER_HOST = "localhost" # IP del server
+CLIENT_ID = "MFXASEAEA23SD5"
 
 def Server_Communication(distance):
-    #TODO
-    pass
+    
+    """ Funzione Dedita alla comunicazione col Server tramite il Protocol MQTT """
+
+    data = {
+        "time": time.time(),
+        "value": distance,
+        "client_id": CLIENT_ID 
+    }
+
+    publish.single(
+        "sensors",
+        payload=str(data),
+        hostname=SERVER_HOST,
+    )
+
 
 def setup():
     GPIO.setmode(GPIO.BOARD)
@@ -38,7 +54,8 @@ def loop():
     while True:
         dis = int(distance()) # Acquisione Distanza -> int 
         print("Distanza: %d cm" % dis)
-        time.sleep(10) # Attesa per 10 secondi
+        time.sleep(60) # il Sensore acquisisce la distanza ogni 60 secondi
+
 
 
 def destroy():
