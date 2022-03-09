@@ -17,6 +17,7 @@ CREATE TABLE "user_sensors" (
     "username" VARCHAR(30) NOT NULL,
     "sensor_id" VARCHAR(30) NOT NULL,
     "location" VARCHAR(30) NOT NULL,
+    "alarm_height" INT NOT NULL,
     foreign key ("username") references "users" ("username")
 );
 
