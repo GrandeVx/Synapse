@@ -16,17 +16,28 @@ def home_page():
 @app.route('/update/',methods=['GET'])
 def user_page():
     Timestamp = time()
-    user_query = str(request.args.get('serial'))
-    age_query = str(request.args.get('measure'))
+    serial_query = str(request.args.get('serial'))
+    measure_query = str(request.args.get('measure'))
 
-    if user_query != "None" and age_query != "None":
-        data_set = {'Message': f'Benvenuto nella pagina di {user_query} che ha {age_query} Anni!!', 'TimeStamp':Timestamp, 'Status': 'OK'}
-    
+    if serial_query != "None" and measure_query != "None":
+        data_set = {'seriale': serial_query, 'measure': measure_query, 'TimeStamp': Timestamp}
+        json_dump_for_save = json.dumps(data_set)
+        with open('./data.json', 'a') as f:
+            f.write(json_dump_for_save)
+            f.write('\n')
+        data_set = {'Message': f'Informazione Archiviata', 'TimeStamp':Timestamp, 'Status': 'OK'}
     else :
         data_set = {'Message': f'Uno dei parametri fondamentali non e stato dichiarato', 'TimeStamp':Timestamp, 'Status': 'ERROR'}
 
     json_dump = json.dumps(data_set)
     return json_dump
+
+@app.route('/get/',methods=['GET'])
+def get_data():
+    with open('./data.json', 'r') as f:
+        data = f.read()
+    return data
+
 
 if __name__ == '__main__':
     app.run(debug=True,port=7777)
