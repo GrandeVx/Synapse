@@ -10,7 +10,14 @@ module.exports = {
         yellow : {
           '600' : '#c0df34',
         }
+      },
+
+      padding : {
+          '13' : '5rem',
+          '18' : '8rem',
       }
+
+      
 
     },
   },
