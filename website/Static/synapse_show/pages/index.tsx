@@ -473,14 +473,123 @@ const Home: NextPage = () => {
           </section>      
           {/* FINE PIATTAFORMA */} 
 
+          {/* FORM */} 
+          <section className="grid grid-row-2 place-items-center pb-20">
+            
+              <section className="pb-6">
 
-          <section className="bg-rose-500 p-9">
+                  <p className="text-center font-bold text-3xl pb-2">Richiedi un Preventivo</p>
+                  <p className="text-center text-gray-400 text-xs pb-3">leave your email here and you will be contacted by one of our experts</p>
+
+              </section>  
+
+              <section className="flex-row">
+
+                  <input className="bg-gray-100 appearance-none border-2 border-gray-100 rounded w-60 py-2 px-4 mr-4 text-gray-800 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name" type="text" value="Enter your email."></input>
+                  <a href="#" className="inline-block text-sm px-9 py-4 leading-none border rounded-lg text-purple-500 border-purple-500
+                  transition-colors ease-in-out mt-4 lg:mt-0">
+                    Get start
+                  </a>
+
+
+              </section>
+
 
           </section>      
+          {/* FINE FORM */} 
 
-          <section className="bg-cyan-500 p-9">
+          <footer className="footer-1 bg-gray-100 py-8 sm:py-12">
+              <div className="container mx-auto px-4">
+                <div className="sm:flex sm:flex-wrap sm:-mx-4 md:py-4">
+                  <div className="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6">
+                    <h5 className="text-xl font-bold mb-6">Features</h5>
+                    <ul className="list-none footer-links">
+                      <li className="mb-2">
+                        <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Cool stuff</a>
+                      </li>
+                      <li className="mb-2">
+                        <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Random feature</a>
+                      </li>
+                      <li className="mb-2">
+                        <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Team feature</a>
+                      </li>
+                      <li className="mb-2">
+                        <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Stuff for developers</a>
+                      </li>
+                      <li className="mb-2">
+                        <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Another one</a>
+                      </li>
+                      <li className="mb-2">
+                        <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Last time</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6 mt-8 sm:mt-0">
+                    <h5 className="text-xl font-bold mb-6">Resources</h5>
+                    <ul className="list-none footer-links">
+                      <li className="mb-2">
+                        <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Resource</a>
+                      </li>
+                      <li className="mb-2">
+                        <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Resource name</a>
+                      </li>
+                      <li className="mb-2">
+                        <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Another resource</a>
+                      </li>
+                      <li className="mb-2">
+                        <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Final resource</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6 mt-8 md:mt-0">
+                    <h5 className="text-xl font-bold mb-6">About</h5>
+                    <ul className="list-none footer-links">
+                      <li className="mb-2">
+                        <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Team</a>
+                      </li>
+                      <li className="mb-2">
+                        <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Locations</a>
+                      </li>
+                      <li className="mb-2">
+                        <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Privacy</a>
+                      </li>
+                      <li className="mb-2">
+                        <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Terms</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6 mt-8 md:mt-0">
+                    <h5 className="text-xl font-bold mb-6">Help</h5>
+                    <ul className="list-none footer-links">
+                      <li className="mb-2">
+                        <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Support</a>
+                      </li>
+                      <li className="mb-2">
+                        <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Help Center</a>
+                      </li>
+                      <li className="mb-2">
+                        <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Contact Us</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="px-4 mt-4 sm:w-1/3 xl:w-1/6 sm:mx-auto xl:mt-0 xl:ml-auto">
+                    <h5 className="text-xl font-bold mb-6 sm:text-center xl:text-left">Stay connected</h5>
+                    <div className="flex sm:justify-center xl:justify-start">
+                      <a href="" className="w-8 h-8 border border-2 border-gray-400 rounded-full text-center py-1 text-gray-600 hover:text-white hover:bg-purple-400 hover:border-purple-400">
+                        <i className="fab fa-facebook"></i>
+                      </a>
+                      <a href="" className="w-8 h-8 border border-2 border-gray-400 rounded-full text-center py-1 ml-2 text-gray-600 hover:text-white hover:bg-purple-600 hover:border-purple-600">
+                        <i className="fab fa-twitter"></i>
+                      </a>
+                      <a href="" className="w-8 h-8 border border-2 border-gray-400 rounded-full text-center py-1 ml-2 text-gray-600 hover:text-white hover:bg-pink-400 hover:border-pink-400">
+                        <i className="fab fa-google-plus-g"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
 
-</section>      
+              </div>
+            </footer> 
 
 
 
