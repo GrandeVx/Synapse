@@ -12,6 +12,10 @@ import mysql.connector
 from dotenv import dotenv_values
 config = dotenv_values(".env")  
 
+## Per il funzionamento c'è bisongo di un file .env con le credenziali di accesso al database 
+## e un file .json con le credenziali di accesso al firebase 
+
+
 
 mydb = mysql.connector.connect(
   host=config["HOST"],
