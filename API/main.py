@@ -9,10 +9,14 @@ from firebase_admin import db
 
 import mysql.connector
 
+from dotenv import dotenv_values
+config = dotenv_values(".env")  
+
+
 mydb = mysql.connector.connect(
-  host="162.19.3.245",
-  user="apiuser",
-  password="ZhbfpwCBbiYNgX4pIteI",
+  host=config["HOST"],
+  user=config["USER"],
+  password=config["PASSWORD"],
   database="synapse",
   autocommit=True # <-- il commit permette di avere sempre gli aggiornamenti ad ogni query
 )
