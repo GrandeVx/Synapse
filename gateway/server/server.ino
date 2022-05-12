@@ -149,7 +149,7 @@ void uploadData() {
 }
 
 void APICall(String serial,String data) {
-  String upload_url = "https://nonsoancora.com/update/?serial=";
+  String upload_url = "https://162.19.3.245:7777/update/?serial=";
   upload_url += serial;
   upload_url += ("&measure=" + data);
 
