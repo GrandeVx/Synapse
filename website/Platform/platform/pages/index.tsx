@@ -19,8 +19,9 @@ import AccessPage from "./AccessPage";
 export default function Home() {
 
 
-  const UserData = UserStore((state) => state.identifier);
-  const [identifier, setIdentifier] = useState("");
+  const UserData = UserStore((state) => state);
+
+  const [userData, SetuserData] = useState({});
 
   /* 
     Per ottenere costantemente gli aggiornamenti dell'utente generiamo
@@ -29,14 +30,22 @@ export default function Home() {
     ogni volta che cambia lo store
   */
 
-  const update = () => {setIdentifier(UserData)};
+  const update = () => {
+
+    SetuserData(UserData);
+
+    
+
+
+
+  }
   const UpdateChecker = UserStore.subscribe(update);
 
   return (
-    identifier === "" ? (
+    UserData.identifier === "" ? (
       <AccessPage/>
     ) : (
-      <HomePage/>
+      <HomePage Data={UserData}/>
       // https://github.com/notiflix/Notiflix
       // https://dev.to/narottam04/free-tailwind-components-for-your-next-project-2gka
       // https://codepen.io/robstinson/pen/pobJaKa
