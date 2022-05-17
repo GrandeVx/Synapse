@@ -6,7 +6,7 @@ import { useState } from "react";
 import styles from "../styles/Home.module.css";
 import Test from "./test";
 
-
+import HomePage from "./HomePage";
 import AccessPage from "./AccessPage";
 
 
@@ -36,7 +36,7 @@ export default function Home() {
     identifier === "" ? (
       <AccessPage/>
     ) : (
-      <h1> Sei Accesso </h1>
+      <HomePage/>
       // https://github.com/notiflix/Notiflix
       // https://dev.to/narottam04/free-tailwind-components-for-your-next-project-2gka
       // https://codepen.io/robstinson/pen/pobJaKa

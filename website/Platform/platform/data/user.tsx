@@ -1,6 +1,5 @@
 import create from 'zustand'
 import Axios from 'axios';
-import { resolve } from 'path';
 
 interface sensore {
   id: string,

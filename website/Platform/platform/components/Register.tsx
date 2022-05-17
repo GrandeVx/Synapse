@@ -1,7 +1,10 @@
 import { FormEvent } from "react";
 import axios from "axios";
 import { RegisterUser } from "../data/user";
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import UserStore from "../data/user";
+
+
 export default function Register({setRegister}) {
 
     const UserData = UserStore((state) => state);
@@ -14,9 +17,10 @@ export default function Register({setRegister}) {
         const username = formData.get("username").toString();
         const email = formData.get("email").toString();
         const password = formData.get("password").toString();
-        const Operation = RegisterUser(username,email,password).then(() => {
+        RegisterUser(username,email,password).then(() => {
+            Notify.success('Registrazione avvenuta con successo');
             setRegister(false);
-        }).catch((err) => console.log("Errore", err));
+        }).catch((err) => Notify.failure(err));
 
 
     }
