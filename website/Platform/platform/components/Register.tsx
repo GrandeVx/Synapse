@@ -17,11 +17,8 @@ export default function Register({setRegister}) {
         const username = formData.get("username").toString();
         const email = formData.get("email").toString();
         const password = formData.get("password").toString();
-        RegisterUser(username,email,password).then(() => {
-            Notify.success('Registrazione avvenuta con successo');
-            setRegister(false);
-        }).catch((err) => Notify.failure(err));
 
+        RegisterUser(username,email,password,setRegister)
 
     }
 
