@@ -50,10 +50,10 @@ export default function HomePage({Data}) {
                     <div className="flex items-center flex-shrink-0 h-16 px-8 border-b border-gray-800">
                         <h1 className="text-lg font-medium">Synapse Home</h1>
                         <button className="flex items-center justify-center h-10 px-4 ml-auto text-sm font-medium rounded hover:bg-gray-800">
-                            Action 1
+                        Assistenza
                         </button>
                         <button className="flex items-center justify-center h-10 px-4 ml-2 text-sm font-medium bg-gray-800 rounded hover:bg-gray-700">
-                            Action 2
+                            Home
                         </button>
                         <button className="relative ml-2 text-sm focus:outline-none group">
                             <div className="flex items-center justify-between w-10 h-10 rounded hover:bg-gray-800">
@@ -62,14 +62,14 @@ export default function HomePage({Data}) {
                                 </svg>
                             </div>
                             <div className="absolute right-0 flex-col items-start hidden w-40 mt-1 pb-1 bg-gray-800 border border-gray-800 shadow-lg group-focus:flex">
-                                <a className="w-full px-4 py-2 text-left hover:bg-gray-900" href="#">Menu Item 1</a>
-                                <a className="w-full px-4 py-2 text-left hover:bg-gray-900" href="#">Menu Item 2</a>
-                                <a className="w-full px-4 py-2 text-left hover:bg-gray-900" href="#">Menu Item 3</a>
+                                <a className="w-full px-4 py-2 text-left hover:bg-gray-900" href="#">Account</a>
+                                <a className="w-full px-4 py-2 text-left hover:bg-gray-900" href="#">Impostazioni</a>
+                                <a className="w-full px-4 py-2 text-left hover:bg-gray-900" href="#">Esci</a>
                             </div>
                         </button>
                     </div>
 
-                        <Sensors Sensori={Data.sensors}/>
+                        <Sensors Data={Data}/>
 
                 </div>
     
