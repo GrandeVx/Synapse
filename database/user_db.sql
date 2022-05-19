@@ -16,6 +16,8 @@ CREATE TABLE users (
 CREATE TABLE sensors_available (
     sensor_id VARCHAR(30) NOT NULL,
     username VARCHAR(30),
+    name VARCHAR(30) NOT NULL,
+    description VARCHAR(255) NOT NULL,
     location VARCHAR(30),
     alarm_height INT,
     primary key (sensor_id)
