@@ -15,15 +15,15 @@ config = dotenv_values(".env")
 ## Per il funzionamento c'è bisongo di un file .env con le credenziali di accesso al database 
 ## e un file .json con le credenziali di accesso al firebase 
 
+config = {
+'user': config["USER"],
+'password': config["PASSWORD"],
+'host': config["HOST"],
+'port': '3306',
+'database': 'synapse',
+'raise_on_warnings': True,}
 
-
-mydb = mysql.connector.connect(
-  host=config["HOST"],
-  user=config["USER"],
-  password=config["PASSWORD"],
-  database="synapse",
-  autocommit=True # <-- il commit permette di avere sempre gli aggiornamenti ad ogni query
-)
+mydb = mysql.connector.connect(**config)
 
 cred = credentials.Certificate("firebase.json")
 firebase_admin.initialize_app(cred, {
@@ -65,7 +65,7 @@ def user_page():
             if (myresult[0][1] != None) :
 
                 if (myresult[0][3] != None):
-                    if (int(measure_query) >= int(myresult[0][3])):
+                    if (int(measure_query) >= int(myresult[0][5])):
                         alarm() # se la misura è maggiore di quella di sicurezza, allarme
 
                 ref = db.reference(serial_query)
@@ -86,6 +86,9 @@ def user_page():
 
         else :
             return "<h1> [Errore 01] Sensore non Registrato Contatta il Fornitore </h1>"
+
+    else :
+        return "<h1> [Errore 03] Parametri non validi </h1>"
 
     return "<h1> Operazione Avvenuta con Successo </h1>"
 
