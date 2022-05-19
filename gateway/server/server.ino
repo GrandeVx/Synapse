@@ -149,20 +149,18 @@ void uploadData() {
 }
 
 void APICall(String serial,String data) {
-  String upload_url = "https://162.19.3.245:7777/update/?serial=";
+  String upload_url = "http://162.19.3.245:7777/update/?serial=";
   upload_url += serial;
   upload_url += ("&measure=" + data);
 
   Console.println("Risultato : " + upload_url);
-
-
-  /*
+  
+ 
   Process p;    // Create a process and call it "p", this process will execute a Linux curl command
   p.begin("curl");
   p.addParameter("-k");
   p.addParameter(upload_url);
   p.run();    // Run the process and wait for its termination
 
-  */
    
 }

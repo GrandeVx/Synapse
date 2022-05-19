@@ -1,26 +1,9 @@
-/*
-  LoRa Simple Client for Arduino :
-  Support Devices: LoRa Shield + Arduino 
-  
-  Example sketch showing how to create a simple messageing client, 
-  with the RH_RF95 class. RH_RF95 class does not provide for addressing or
-  reliability, so you should only use RH_RF95 if you do not need the higher
-  level messaging abilities.
-
-  It is designed to work with the other example LoRa Simple Server
-  User need to use the modified RadioHead library from:
-  https://github.com/dragino/RadioHead
-
-  modified 16 11 2016
-  by Edwin Chen <support@dragino.com>
-  Dragino Technology Co., Limited
-*/
 
 #include <SPI.h>
 #include <RH_RF95.h>
 
 #define TRIG_PIN 10
-#define ECHO_PIN 9
+#define ECHO_PIN 8
 
 // Singleton instance of the radio driver
 RH_RF95 rf95;
@@ -54,7 +37,7 @@ void loop()
   Serial.print("Distanza: " + String(distanza) + " cm \n");
   
   int randNumber = random(3,20);
-  String randNumber_to_string = String(randNumber);
+  String randNumber_to_string = String(distanza);
   String sender = randNumber_to_string + "-" + seriale;
   Serial.println(sender);
   const uint8_t* p = reinterpret_cast<const uint8_t*>(sender.c_str());
