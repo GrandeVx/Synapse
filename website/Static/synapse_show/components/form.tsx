@@ -24,8 +24,8 @@ function FormBlock() {
             
         <section className="pb-6">
 
-            <p className="text-center font-bold text-3xl pb-2">Richiedi un Preventivo</p>
-            <p className="text-center text-gray-400 text-xs pb-3">leave your email here and you will be contacted by one of our experts</p>
+            <p className="text-center font-bold text-3xl pb-2">Request a Quote</p>
+            <p className="text-center text-gray-400 text-xs pb-3">Leave your email here and one of our experts will reach out to you.</p>
 
         </section>  
 

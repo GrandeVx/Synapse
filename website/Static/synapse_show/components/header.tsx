@@ -43,7 +43,7 @@ function HeaderBlock() {
             </svg>
           </span>
 
-          <p className=" text-gray-600 text-base break-all pt-6"> keep track of water level with </p>
+          <p className=" text-gray-600 text-base break-all pt-6"> Keep track of water level with </p>
           <p className=" text-gray-600 text-base break-all pt-1"> our versatile efficent </p>
           <p className=" text-gray-600 text-base break-all pt-1 pb-8"> hand-sized kit.</p>
           <a href="#" className="inline-block text-sm px-9 py-4 leading-none border rounded-lg text-white border-black bg-gray-900 transition-colors ease-in-out  hover:border-transparent mt-4 lg:mt-0">

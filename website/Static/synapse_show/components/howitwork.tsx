@@ -26,8 +26,8 @@ function HowitWorkBlock() {
 
         <section className=" pt-13 pb-13">
           <p className="text-center text-4xl font-semibold text-black"> How it works </p>
-          <p className=" text-gray-400 text-center text-base break-all pt-5"> Mobile banking differs from mobile payments, which</p>
-          <p className=" text-gray-400 text-center text-base break-all pt-1"> involves the use of a mobile device</p>
+          <p className=" text-gray-400 text-center text-base break-all pt-5"> To any user who urges to keep track of water level</p>
+          <p className=" text-gray-400 text-center text-base break-all pt-1"> or any depth, our products are just made for you.</p>
         </section>
 
         <Hiw_Cards />

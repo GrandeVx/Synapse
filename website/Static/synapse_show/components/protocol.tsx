@@ -192,11 +192,11 @@ function ProtocolBlock() {
       </motion.section>
 
       <motion.section className=" flex-row pt-0" ref={ref} animate={controls} initial="hidden" variants={ProtocolVariants_right}>
-        <p className=" text-4xl font-semibold pt-13"> Download</p>
-        <p className="text-4xl font-semibold pt-1"> mobile App</p>
-        <p className=" text-gray-400 text-sm break-all pt-5"> Download Besnik mobile banking app</p>
-        <p className=" text-gray-400 text-sm break-all pt-1"> for IOS and android. It helps you banking</p>
-        <p className=" text-gray-400 text-sm break-all pt-1 pb-12"> quickily and more smartly</p>
+        <p className=" text-4xl font-semibold pt-13"> The Protocols</p>
+        <p className="text-4xl font-semibold pt-1"> We Use</p>
+        <p className=" text-gray-400 text-sm break-all pt-5"> Through an interconnected dedicated network,</p>
+        <p className=" text-gray-400 text-sm break-all pt-1"> our sensor make use of LoRaWAN, granting the access</p>
+        <p className=" text-gray-400 text-sm break-all pt-1 pb-12"> even to far away places, wherever it's needed.</p>
         <a href="#" className="inline-block text-sm px-9 py-4 leading-none border rounded-lg text-white bg-gradient-to-br from-purple-400 via-purple-600 to-pink-400
          transition-colors ease-in-out  hover:border-transparent mt-4 lg:mt-0">
           About
