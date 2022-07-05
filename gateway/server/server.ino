@@ -1,24 +1,4 @@
 
-
-
-/*
-  LoRa Simple Yun Server :
-  Support Devices: LG01. 
-  
-  Example sketch showing how to create a simple messageing server, 
-  with the RH_RF95 class. RH_RF95 class does not provide for addressing or
-  reliability, so you should only use RH_RF95 if you do not need the higher
-  level messaging abilities.
-
-  It is designed to work with the other example LoRa Simple Client
-
-  User need to use the modified RadioHead library from:
-  https://github.com/dragino/RadioHead
-
-  modified 16 11 2016
-  by Edwin Chen <support@dragino.com>
-  Dragino Technology Co., Limited
-*/
 //If you use Dragino IoT Mesh Firmware, uncomment below lines.
 //For product: LG01. 
 #define BAUDRATE 115200
@@ -36,10 +16,6 @@ RH_RF95 rf95;
 
 int led = A2;
 float frequency = 868.0;
-
-// thingspeak
-String myWriteAPIString = "VJG6PDGW2EH2F247";
-String dataString = "";
 
 void uploadData(); // Definiamo la funzione
 
@@ -118,49 +94,15 @@ void loop()
   }
 }
 
-
-void uploadData() {
-
-  String upload_url = "https://api.thingspeak.com/update?api_key=";
-  upload_url += myWriteAPIString;
-  upload_url += "&";
-  upload_url += dataString;
-  
-  Console.println(upload_url);
-  Console.println("Call Linux Command to Send Data");
-  Process p;    // Create a process and call it "p", this process will execute a Linux curl command
-  p.begin("curl");
-  p.addParameter("-k");
-  p.addParameter(upload_url);
-  p.run();    // Run the process and wait for its termination
-
-  Console.print("Feedback from Linux: ");
-  // If there's output from Linux,
-  // send it out the Console:
-  while (p.available()>0) 
-  {
-    char c = p.read();
-    Console.write(c);
-  }
-  Console.println("");
-  Console.println("Call Finished");
-  Console.println("####################################");
-  Console.println("");
-}
-
 void APICall(String serial,String data) {
-  String upload_url = "http://162.19.3.245:7777/update/?serial=";
+  String upload_url = "http://your_api_ip:7777/update/?serial=";
   upload_url += serial;
   upload_url += ("&measure=" + data);
-
   Console.println("Risultato : " + upload_url);
-  
- 
   Process p;    // Create a process and call it "p", this process will execute a Linux curl command
   p.begin("curl");
   p.addParameter("-k");
   p.addParameter(upload_url);
   p.run();    // Run the process and wait for its termination
 
-   
 }
