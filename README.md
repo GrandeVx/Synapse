@@ -24,16 +24,16 @@ More about:
 ### Project layout
 
 ```
-|- API/                                  // Folder containing REST API (Realtime DB & SQL DB)
-|- Old Version/                         // Folder containing the old version of the API
-|- database/                           // Folder containing the db implementation Concept
+|- API/             // Folder containing REST API (Realtime DB & SQL DB)
+|- Old Version/    // Folder containing the old version of the API
+|- database/      // Folder containing the db implementation Concept
 |- gateway/      // Arduino code for the Dragino Lora Gateway (Lora Signal -> TCP)
 |- sensor/      // Arduino code for the Dragino Arduino with Lora Shield (Sensor Signal -> Lora Gateway)
-|- simulation/  // Data Science Analytics with Python Simulation 
-|- website/     // Folder containing the Website and The Platform
+|- simulation/ // Data Science Analytics with Python Simulation 
+|- website/   // Folder containing the Website and The Platform
 |   |
-|   |- Platform/                       // Folder containing the Platform Next Js Web App
-|   |- Static/                         //  Folder containing the Synapse Next Js Website
+|   |- Platform/ // Folder containing the Platform Next Js Web App
+|   |- Static/  //  Folder containing the Synapse Next Js Website
 |
 ```
 
