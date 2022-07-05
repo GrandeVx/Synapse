@@ -16,9 +16,12 @@ void setup()
   pinMode(TRIG_PIN, OUTPUT);
   pinMode(ECHO_PIN, INPUT);
   digitalWrite(TRIG_PIN, LOW);
+
   Serial.println("Avvio il Client");
   if (!rf95.init())
     Serial.println("Avvio Fallito");
+
+  // Setup Lora frequency  
   rf95.setFrequency(frequency);
   rf95.setTxPower(13);
   rf95.setSpreadingFactor(7);
@@ -35,11 +38,10 @@ void loop()
   unsigned long tempo = pulseIn(ECHO_PIN, HIGH);
   float distanza = 0.03438 * tempo / 2;
   Serial.print("Distanza: " + String(distanza) + " cm \n");
-  
-  int randNumber = random(3,20);
+
   String randNumber_to_string = String(distanza);
   String sender = randNumber_to_string + "-" + seriale;
-  Serial.println(sender);
+
   const uint8_t* p = reinterpret_cast<const uint8_t*>(sender.c_str());
   rf95.send(p, 16);
   rf95.waitPacketSent();
