@@ -13,9 +13,9 @@ export default function Sensors({Data}) {
 
     return (
         <div className="grid grid-cols-3 gap-6 p-4">
-        {
+        {   
+
             Data.sensors.map((sensor, index) => {
-                console.log(sensor)
                 if (sensor != null)
                 return (
                     <div>
@@ -24,6 +24,7 @@ export default function Sensors({Data}) {
                     </div>
                     )
             }
+    
             )
         }
 

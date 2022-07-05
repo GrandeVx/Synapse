@@ -13,6 +13,9 @@ interface sensore {
   timestamp: Date
 }
 
+const server = "http://162.19.3.245:3002/";
+
+
 inizializeDatabase(); // Initialize Firebase
 
 const UserStore = create<{
@@ -48,7 +51,7 @@ export const getSensorData = async (data : any ,store : any) => {
   data.map((sensor) => {
 
     if (sensor != null) {
-      Axios.post('http://localhost:3002/getSensorData', {
+      Axios.post(server+'getSensorData', {
         sensor_id: sensor.id
       }).then(function (response) {
         if (response.data.code === 200) {
@@ -67,7 +70,7 @@ export const getSensorData = async (data : any ,store : any) => {
 
 export const addSensor = async (id:string,nome:string,descrizione:string,altezza:string,username:string , Data : any, SetOpen: any) => {
 
-  await Axios.post('http://localhost:3002/addSensor', {
+  await Axios.post(server+'addSensor', {
     username:username,
     id: id,
     nome: nome,
@@ -102,7 +105,7 @@ export const addSensor = async (id:string,nome:string,descrizione:string,altezza
 
 const getSensor = async (id: string,store : any) => {
   
-  await Axios.post('http://localhost:3002/getSensor', {
+  await Axios.post(server+'getSensor', {
     username: id
   }).then((response) => {
     if (response.data.code === 200) {
@@ -160,7 +163,7 @@ const getSensor = async (id: string,store : any) => {
 
 export const LoginUser = async (email: string, password: string, store : any) => {
 
-  await Axios.post('http://localhost:3002/login', {
+  await Axios.post(server+'login', {
     email: email,
     password: password
   }).then((response) => {
@@ -178,7 +181,7 @@ export const LoginUser = async (email: string, password: string, store : any) =>
 
 export const RegisterUser = async (username:string,email: string, password: string,setRegister:any) => {
 
-  await Axios.post('http://localhost:3002/register', {
+  await Axios.post(server+'register', {
     email: email,
     password: password,
     username: username

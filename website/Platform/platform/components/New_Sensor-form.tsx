@@ -1,5 +1,5 @@
-import { Dialog, RadioGroup } from '@headlessui/react'
-import { FormEvent } from 'react';
+import { Dialog, RadioGroup , Transition} from '@headlessui/react'
+import { FormEvent ,Fragment} from 'react';
 import { addSensor } from "../data/user";
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
@@ -23,7 +23,15 @@ export default function NewSensorForm({isOpen, setIsOpen , userData}) {
     }
 
     return (
-
+        <Transition
+        show={isOpen}
+        enter="ease-out duration-300"
+        enterFrom="opacity-0 scale-95"
+        enterTo="opacity-100 scale-100"
+        leave="ease-in duration-200"
+        leaveFrom="opacity-100 scale-100"
+        leaveTo="opacity-0 scale-95"
+      >
         <Dialog
         
           open={isOpen}
@@ -70,8 +78,7 @@ export default function NewSensorForm({isOpen, setIsOpen , userData}) {
             
               </div>
         </Dialog>
-
-
+        </Transition>
 
 
     )

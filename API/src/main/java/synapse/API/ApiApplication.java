@@ -19,7 +19,7 @@ public class ApiApplication {
 
 	static ClassLoader classLoader = ApiApplication.class.getClassLoader();
 
-	static File file = new File(Objects.requireNonNull(classLoader.getResource("./ServiceKey.json")).getFile());
+	static File file = new File(Objects.requireNonNull(classLoader.getResource("ServiceKey.json")).getFile());
 	static FileInputStream serviceAccount;
 
 	static {
