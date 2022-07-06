@@ -43,17 +43,6 @@ More about:
     
     Todo
 
-### Endpoints 
-
-Todo
-
-#### HTML
-
-|HTTP Method|URL|Description|
-|---|---|---|
-|`GET`|http://localhost:8000/ | Root page |
-|`GET`|http://localhost:8000/swagger/ui | Swagger UI page |
-
 #### User Service
 
 |HTTP Method|URL|Description|
